@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="./assets/css/index.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/timelinejs/3.6.6/js/timeline-min.js">
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <title>Spiderman - Accueil</title>
 </head>
 
@@ -60,14 +61,36 @@
                     <button type="button" class="btn button2">Voir les adversaires</button>
                 </div>
                 <p class="description">L’araignée sympa du quartier!</p>
-                <audio class="mt-4" src="./assets/audio/audio1.mp3" controls></audio>
+                <div>
+                    <section style="display:flex;width: 500px;justify-content: space-between;">
+                        <div style="width: 30%;"><img style="width: 60%;" src="assets/heroslider3.png" alt=""></div>
+                        <div style="width: 60%;">Now playing <br><br><br><br>
+                            <b>What's up Danger</b><br> Blackway & Black Caviar
+                        </div>
+                        <div style="padding:10px;">
+                            <br><br><br><br>
+                            <i style="font-size: 35px;color: white;" id="coeur" class="fa-regular fa-heart"></i>
+                            <i style="display:none;font-size: 35px;" id="coeur1" class="fa-solid fa-heart"></i>
+                        </div>
+                    </section>
+                    <div style="display:flex;justify-content: space-between; width: 500px;text-align: center;padding: 20px 0;">
+
+                        <p class="arriere"><i style="font-size: 30px;" class="fa-solid fa-backward-fast"></i></p>
+                        <p style="display: none;" class="pause"><i style="font-size: 30px;" class="fa-solid fa-pause"></i></p>
+                        <p class="play"><i style="font-size: 30px;" class="fa-solid fa-play"></i></p>
+                        <p class="avant"><i style="font-size: 30px;" class="fa-solid fa-forward-fast"></i></p>
+                    </div>
+                    <audio class="audio-ppl">
+                        <source class="mt-4" src="./assets/audio/audio1.mp3" controls></audio>
+                    </audio>
+                </div>
             </div>
         </section>
         <section id="lesspiderman" class="pb-5">
             <div class="container text-white">
                 <div class="row">
                     <div class="col-md-6">
-                        <h1 class="text-uppercase">Les Spidermans au cinéma</h1>
+                        <h1 class="text-uppercase de-gauche1">Les Spidermans au cinéma</h1>
                         <p>Spiderman a pu bénéficier de reboot qui ont permis d’adapter ses histoires pour chaque génération !
                         </p>
                     </div>
@@ -140,19 +163,20 @@
                         </p>
                     </div>
                     <div class="newsletter-formulaire text-center ">
-                        <form action="" method="">
-                            <input class="form-newsletter" type="text" onclick="validation()" placeholder="Nom" required>
+                        <form action="" method="" id="form-newsletter">
+                            <input class=" form-newsletter" type="text" placeholder="Nom " id="nom ">
+                            <span id="erreurNom "></span>
                             <div>
-                                <input class="form-newsletter" type="email" name="" id="" placeholder="Adresse email" required>
+                                <input class="form-newsletter" type="email" name="" id="mail " placeholder="Adresse email ">
                             </div>
                             <div>
                                 <div class="d-flex text-center justify-content-center align-items-center ">
-                                    <input type="checkbox" id="subscribeNews" name="subscribe" value="newsletter" required>
-                                    <label for="subscribeNews" class="label pt-4">Je reconnais accepter la politique de confidentialité
+                                    <input type="checkbox" id="subscribeNews " name="subscribe">
+                                    <label for="subscribeNews " class="label pt-4 ">Je reconnais accepter la politique de confidentialité
                                 de Sayna X Marvel. 
                             </div>
                             </div>
-                            <input class="form-button btn" type="submit" value="Envoyer">
+                            <input id="new-validation" class="form-button btn button1" type="submit" value="Envoyer" onclick="validation()">
                         </form>
                     </div>
                 </div>
@@ -160,25 +184,25 @@
         </div>
     </section>
     <footer>
-        <div class="conteneur footer">
-            <div class="navigation-footer">
-                <ul class="list1">
-                    <li><a href="#">Mobile app</a></li>
-                    <li><a href="#">Politique de confidentialite</a></li>
-                    <li><a href="#">Cookies</a></li>
+        <div class="conteneur footer ">
+            <div class="navigation-footer ">
+                <ul class="list1 ">
+                    <li><a href="# ">Mobile app</a></li>
+                    <li><a href="# ">Politique de confidentialite</a></li>
+                    <li><a href="# ">Cookies</a></li>
                 </ul>
-                <div class="brand">
-                    <a href="#">
-                        <img src="./assets/logo/logo1.png" width="16%" alt="">
-                        <img src="./assets/logo/logo2.png" width="10%" alt="">
-                        <img src="./assets/logo/logo3.png" width="50%" alt="">
+                <div class="brand ">
+                    <a href="# ">
+                        <img src="./assets/logo/logo1.png " width="16% " alt=" ">
+                        <img src="./assets/logo/logo2.png " width="10% " alt=" ">
+                        <img src="./assets/logo/logo3.png " width="50% " alt=" ">
                     </a>
                 </div>
-                <ul class="list2">
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><select class="formselect">
-                        <option selected="">Langue</option>
+                <ul class="list2 ">
+                    <li><a href="# ">Contact</a></li>
+                    <li><a href="# ">Blog</a></li>
+                    <li><select class="formselect ">
+                        <option selected=" ">Langue</option>
                         <option>Francais</option>
                         <option>Anglais</option>
                         <option>Espagnol</option>
@@ -186,18 +210,22 @@
                         </select></li>
                 </ul>
             </div>
-            <div class="media">
-                <img src="./assets/logo/logof.png" alt="">
-                <img src="./assets/logo/logoi.png" alt="">
-                <img src="./assets/logo/logot.png" alt="">
-                <img src="./assets/logo/logoy.png" alt="">
+            <div class="media" style="display:flex;justify-content:center;align-items: center;">
+                <!-- <img class="logors" src="./assets/logo/logof.png " alt=" ">
+                <img class="logors" src="./assets/logo/logoi.png " alt=" ">
+                <img class="logors" src="./assets/logo/logot.png " alt=" ">
+                <img class="logors" src="./assets/logo/logoy.png " alt=" "> -->
+                <div style="padding: 0 10px;"><p class="logors" style="background-color: #b11313;color:black;border-radius: 50%;width: 50px;"><i style="font-size: 45px;padding: 3px 0;" class="fa-brands fa-facebook-f"></i></p></div>
+                <div style="padding: 0 10px;"><p class="logors" style="background-color: #b11313;color:black;border-radius: 50%; width:50px;"><i style="font-size: 45px;padding: 3px 0;" class="fa-brands fa-instagram"></i></p></div>
+                <div style="padding: 0 10px;"><p class="logors" style="background-color: #b11313;color:black;border-radius: 50%; width:50px;"><i style="font-size: 45px;padding: 3px 0;" class="fa-brands fa-youtube"></i></p></div>
+                <div style="padding: 0 10px;"><p class="logors" style="background-color: #b11313;color:black;border-radius: 50%; width:50px;"><i style="font-size: 45px;padding: 3px 0;" style class="fa-brands fa-twitter"></i></p></div>
             </div>
-            <div class="copyright">
+            <div class="copyright ">
                 <p>&copy;SaynaXMarvel, Inc 2022. We love our users</p>
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="assets/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
+    <script src="assets/js/index.js "></script>
 </body>
 </html>

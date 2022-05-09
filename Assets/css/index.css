@@ -10,12 +10,31 @@
     background-color: var(--primary-ad-color);
     height: 870px;
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: center right fixed;
     background-size: auto;
+    background-attachment: fixed;
+}
+
+.box {
+    margin-left: -700px;
+    transition: all 0.2s ease-out;
 }
 
 .titre {
     margin-bottom: 50px;
+}
+
+.titre-final {
+    margin-left: 5%;
+}
+
+.de-gauche1 {
+    margin-left: -700px;
+    transition: all 0.2 ease-out;
+}
+
+.de-gauche1-final {
+    margin-left: 5%;
 }
 
 #lesspiderman {
@@ -69,6 +88,7 @@
     height: 550px;
     background-image: url("../img/img5.png");
     background-position: center left;
+    background-attachment: fixed;
     background-size: auto;
     background-repeat: no-repeat;
     padding: 20px 0;
